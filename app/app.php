@@ -19,7 +19,7 @@
         return $app['twig']->render('input-number.html.twig');
     });
 
-    $app->post("/ping_ponged", function() use ($app) {
+    $app->get("/ping_ponged", function() use ($app) {
         $my_PingPongCounter = new PingPongCounter;
         $ping_ponged_phrase = $my_PingPongCounter->countUp($_GET['number']);
 

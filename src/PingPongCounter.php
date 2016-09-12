@@ -3,7 +3,7 @@
     {
         function countUp($input_number)
         {
-            $input_number = 15;
+            $input_number = $_GET['number'];
             $count_array = range(1, $input_number);
 
             foreach ($count_array as &$count) {
@@ -20,7 +20,8 @@
                 }
             }
 
-            return $count_array;
+            return implode(", ",$count_array);
         }
+
     }
 ?>
